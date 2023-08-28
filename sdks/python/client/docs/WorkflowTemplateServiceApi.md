@@ -513,6 +513,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                     optional=True,
                                 ),
                                 security_token="security_token_example",
+                                use_sdk_creds=True,
                             ),
                             path="path_example",
                             raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -526,6 +527,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                     optional=True,
                                 ),
                                 bucket="bucket_example",
+                                ca_secret=SecretKeySelector(
+                                    key="key_example",
+                                    name="name_example",
+                                    optional=True,
+                                ),
                                 create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                     object_locking=True,
                                 ),
@@ -592,6 +598,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                             "key": "key_example",
                         },
                     ),
+                    pod_spec_patch="pod_spec_patch_example",
                     service_account_name="service_account_name_example",
                     strategy="strategy_example",
                 ),
@@ -818,6 +825,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -831,6 +839,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -963,6 +976,9 @@ with argo_workflows.ApiClient(configuration) as api_client:
                     ),
                 ),
                 pod_gc=IoArgoprojWorkflowV1alpha1PodGC(
+                    delete_delay_duration=Duration(
+                        duration="duration_example",
+                    ),
                     label_selector=LabelSelector(
                         match_expressions=[
                             LabelSelectorRequirement(
@@ -1432,6 +1448,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                 optional=True,
                             ),
                             security_token="security_token_example",
+                            use_sdk_creds=True,
                         ),
                         raw=IoArgoprojWorkflowV1alpha1RawArtifact(
                             data="data_example",
@@ -1443,6 +1460,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                 optional=True,
                             ),
                             bucket="bucket_example",
+                            ca_secret=SecretKeySelector(
+                                key="key_example",
+                                name="name_example",
+                                optional=True,
+                            ),
                             create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                 object_locking=True,
                             ),
@@ -2234,6 +2256,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                     optional=True,
                                                 ),
                                                 security_token="security_token_example",
+                                                use_sdk_creds=True,
                                             ),
                                             path="path_example",
                                             raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -2247,6 +2270,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                     optional=True,
                                                 ),
                                                 bucket="bucket_example",
+                                                ca_secret=SecretKeySelector(
+                                                    key="key_example",
+                                                    name="name_example",
+                                                    optional=True,
+                                                ),
                                                 create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                     object_locking=True,
                                                 ),
@@ -2510,6 +2538,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                             optional=True,
                                                         ),
                                                         security_token="security_token_example",
+                                                        use_sdk_creds=True,
                                                     ),
                                                     path="path_example",
                                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -2523,6 +2552,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                             optional=True,
                                                         ),
                                                         bucket="bucket_example",
+                                                        ca_secret=SecretKeySelector(
+                                                            key="key_example",
+                                                            name="name_example",
+                                                            optional=True,
+                                                        ),
                                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                             object_locking=True,
                                                         ),
@@ -2808,6 +2842,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     security_token="security_token_example",
+                                    use_sdk_creds=True,
                                 ),
                                 path="path_example",
                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -2821,6 +2856,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     bucket="bucket_example",
+                                    ca_secret=SecretKeySelector(
+                                        key="key_example",
+                                        name="name_example",
+                                        optional=True,
+                                    ),
                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                         object_locking=True,
                                     ),
@@ -3361,6 +3401,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     security_token="security_token_example",
+                                    use_sdk_creds=True,
                                 ),
                                 path="path_example",
                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -3374,6 +3415,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     bucket="bucket_example",
+                                    ca_secret=SecretKeySelector(
+                                        key="key_example",
+                                        name="name_example",
+                                        optional=True,
+                                    ),
                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                         object_locking=True,
                                     ),
@@ -3679,6 +3725,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     security_token="security_token_example",
+                                    use_sdk_creds=True,
                                 ),
                                 path="path_example",
                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -3692,6 +3739,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     bucket="bucket_example",
+                                    ca_secret=SecretKeySelector(
+                                        key="key_example",
+                                        name="name_example",
+                                        optional=True,
+                                    ),
                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                         object_locking=True,
                                     ),
@@ -3958,6 +4010,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     security_token="security_token_example",
+                                    use_sdk_creds=True,
                                 ),
                                 path="path_example",
                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -3971,6 +4024,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     bucket="bucket_example",
+                                    ca_secret=SecretKeySelector(
+                                        key="key_example",
+                                        name="name_example",
+                                        optional=True,
+                                    ),
                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                         object_locking=True,
                                     ),
@@ -4794,6 +4852,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                     optional=True,
                                                 ),
                                                 security_token="security_token_example",
+                                                use_sdk_creds=True,
                                             ),
                                             path="path_example",
                                             raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -4807,6 +4866,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                     optional=True,
                                                 ),
                                                 bucket="bucket_example",
+                                                ca_secret=SecretKeySelector(
+                                                    key="key_example",
+                                                    name="name_example",
+                                                    optional=True,
+                                                ),
                                                 create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                     object_locking=True,
                                                 ),
@@ -5066,6 +5130,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                             optional=True,
                                                         ),
                                                         security_token="security_token_example",
+                                                        use_sdk_creds=True,
                                                     ),
                                                     path="path_example",
                                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -5079,6 +5144,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                             optional=True,
                                                         ),
                                                         bucket="bucket_example",
+                                                        ca_secret=SecretKeySelector(
+                                                            key="key_example",
+                                                            name="name_example",
+                                                            optional=True,
+                                                        ),
                                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                             object_locking=True,
                                                         ),
@@ -5945,6 +6015,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                     optional=True,
                                 ),
                                 security_token="security_token_example",
+                                use_sdk_creds=True,
                             ),
                             raw=IoArgoprojWorkflowV1alpha1RawArtifact(
                                 data="data_example",
@@ -5956,6 +6027,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                     optional=True,
                                 ),
                                 bucket="bucket_example",
+                                ca_secret=SecretKeySelector(
+                                    key="key_example",
+                                    name="name_example",
+                                    optional=True,
+                                ),
                                 create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                     object_locking=True,
                                 ),
@@ -6747,6 +6823,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                         optional=True,
                                                     ),
                                                     security_token="security_token_example",
+                                                    use_sdk_creds=True,
                                                 ),
                                                 path="path_example",
                                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -6760,6 +6837,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                         optional=True,
                                                     ),
                                                     bucket="bucket_example",
+                                                    ca_secret=SecretKeySelector(
+                                                        key="key_example",
+                                                        name="name_example",
+                                                        optional=True,
+                                                    ),
                                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                         object_locking=True,
                                                     ),
@@ -7023,6 +7105,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                                 optional=True,
                                                             ),
                                                             security_token="security_token_example",
+                                                            use_sdk_creds=True,
                                                         ),
                                                         path="path_example",
                                                         raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -7036,6 +7119,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                                 optional=True,
                                                             ),
                                                             bucket="bucket_example",
+                                                            ca_secret=SecretKeySelector(
+                                                                key="key_example",
+                                                                name="name_example",
+                                                                optional=True,
+                                                            ),
                                                             create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                                 object_locking=True,
                                                             ),
@@ -7321,6 +7409,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -7334,6 +7423,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -7874,6 +7968,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -7887,6 +7982,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -8192,6 +8292,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -8205,6 +8306,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -8471,6 +8577,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -8484,6 +8591,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -9307,6 +9419,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                         optional=True,
                                                     ),
                                                     security_token="security_token_example",
+                                                    use_sdk_creds=True,
                                                 ),
                                                 path="path_example",
                                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -9320,6 +9433,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                         optional=True,
                                                     ),
                                                     bucket="bucket_example",
+                                                    ca_secret=SecretKeySelector(
+                                                        key="key_example",
+                                                        name="name_example",
+                                                        optional=True,
+                                                    ),
                                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                         object_locking=True,
                                                     ),
@@ -9579,6 +9697,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                                 optional=True,
                                                             ),
                                                             security_token="security_token_example",
+                                                            use_sdk_creds=True,
                                                         ),
                                                         path="path_example",
                                                         raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -9592,6 +9711,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                                 optional=True,
                                                             ),
                                                             bucket="bucket_example",
+                                                            ca_secret=SecretKeySelector(
+                                                                key="key_example",
+                                                                name="name_example",
+                                                                optional=True,
+                                                            ),
                                                             create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                                 object_locking=True,
                                                             ),
@@ -11330,6 +11454,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                     optional=True,
                                 ),
                                 security_token="security_token_example",
+                                use_sdk_creds=True,
                             ),
                             path="path_example",
                             raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -11343,6 +11468,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                     optional=True,
                                 ),
                                 bucket="bucket_example",
+                                ca_secret=SecretKeySelector(
+                                    key="key_example",
+                                    name="name_example",
+                                    optional=True,
+                                ),
                                 create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                     object_locking=True,
                                 ),
@@ -11409,6 +11539,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                             "key": "key_example",
                         },
                     ),
+                    pod_spec_patch="pod_spec_patch_example",
                     service_account_name="service_account_name_example",
                     strategy="strategy_example",
                 ),
@@ -11635,6 +11766,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -11648,6 +11780,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -11780,6 +11917,9 @@ with argo_workflows.ApiClient(configuration) as api_client:
                     ),
                 ),
                 pod_gc=IoArgoprojWorkflowV1alpha1PodGC(
+                    delete_delay_duration=Duration(
+                        duration="duration_example",
+                    ),
                     label_selector=LabelSelector(
                         match_expressions=[
                             LabelSelectorRequirement(
@@ -12249,6 +12389,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                 optional=True,
                             ),
                             security_token="security_token_example",
+                            use_sdk_creds=True,
                         ),
                         raw=IoArgoprojWorkflowV1alpha1RawArtifact(
                             data="data_example",
@@ -12260,6 +12401,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                 optional=True,
                             ),
                             bucket="bucket_example",
+                            ca_secret=SecretKeySelector(
+                                key="key_example",
+                                name="name_example",
+                                optional=True,
+                            ),
                             create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                 object_locking=True,
                             ),
@@ -13051,6 +13197,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                     optional=True,
                                                 ),
                                                 security_token="security_token_example",
+                                                use_sdk_creds=True,
                                             ),
                                             path="path_example",
                                             raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -13064,6 +13211,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                     optional=True,
                                                 ),
                                                 bucket="bucket_example",
+                                                ca_secret=SecretKeySelector(
+                                                    key="key_example",
+                                                    name="name_example",
+                                                    optional=True,
+                                                ),
                                                 create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                     object_locking=True,
                                                 ),
@@ -13327,6 +13479,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                             optional=True,
                                                         ),
                                                         security_token="security_token_example",
+                                                        use_sdk_creds=True,
                                                     ),
                                                     path="path_example",
                                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -13340,6 +13493,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                             optional=True,
                                                         ),
                                                         bucket="bucket_example",
+                                                        ca_secret=SecretKeySelector(
+                                                            key="key_example",
+                                                            name="name_example",
+                                                            optional=True,
+                                                        ),
                                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                             object_locking=True,
                                                         ),
@@ -13625,6 +13783,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     security_token="security_token_example",
+                                    use_sdk_creds=True,
                                 ),
                                 path="path_example",
                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -13638,6 +13797,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     bucket="bucket_example",
+                                    ca_secret=SecretKeySelector(
+                                        key="key_example",
+                                        name="name_example",
+                                        optional=True,
+                                    ),
                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                         object_locking=True,
                                     ),
@@ -14178,6 +14342,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     security_token="security_token_example",
+                                    use_sdk_creds=True,
                                 ),
                                 path="path_example",
                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -14191,6 +14356,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     bucket="bucket_example",
+                                    ca_secret=SecretKeySelector(
+                                        key="key_example",
+                                        name="name_example",
+                                        optional=True,
+                                    ),
                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                         object_locking=True,
                                     ),
@@ -14496,6 +14666,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     security_token="security_token_example",
+                                    use_sdk_creds=True,
                                 ),
                                 path="path_example",
                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -14509,6 +14680,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     bucket="bucket_example",
+                                    ca_secret=SecretKeySelector(
+                                        key="key_example",
+                                        name="name_example",
+                                        optional=True,
+                                    ),
                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                         object_locking=True,
                                     ),
@@ -14775,6 +14951,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     security_token="security_token_example",
+                                    use_sdk_creds=True,
                                 ),
                                 path="path_example",
                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -14788,6 +14965,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     bucket="bucket_example",
+                                    ca_secret=SecretKeySelector(
+                                        key="key_example",
+                                        name="name_example",
+                                        optional=True,
+                                    ),
                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                         object_locking=True,
                                     ),
@@ -15611,6 +15793,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                     optional=True,
                                                 ),
                                                 security_token="security_token_example",
+                                                use_sdk_creds=True,
                                             ),
                                             path="path_example",
                                             raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -15624,6 +15807,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                     optional=True,
                                                 ),
                                                 bucket="bucket_example",
+                                                ca_secret=SecretKeySelector(
+                                                    key="key_example",
+                                                    name="name_example",
+                                                    optional=True,
+                                                ),
                                                 create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                     object_locking=True,
                                                 ),
@@ -15883,6 +16071,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                             optional=True,
                                                         ),
                                                         security_token="security_token_example",
+                                                        use_sdk_creds=True,
                                                     ),
                                                     path="path_example",
                                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -15896,6 +16085,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                             optional=True,
                                                         ),
                                                         bucket="bucket_example",
+                                                        ca_secret=SecretKeySelector(
+                                                            key="key_example",
+                                                            name="name_example",
+                                                            optional=True,
+                                                        ),
                                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                             object_locking=True,
                                                         ),
@@ -16762,6 +16956,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                     optional=True,
                                 ),
                                 security_token="security_token_example",
+                                use_sdk_creds=True,
                             ),
                             raw=IoArgoprojWorkflowV1alpha1RawArtifact(
                                 data="data_example",
@@ -16773,6 +16968,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                     optional=True,
                                 ),
                                 bucket="bucket_example",
+                                ca_secret=SecretKeySelector(
+                                    key="key_example",
+                                    name="name_example",
+                                    optional=True,
+                                ),
                                 create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                     object_locking=True,
                                 ),
@@ -17564,6 +17764,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                         optional=True,
                                                     ),
                                                     security_token="security_token_example",
+                                                    use_sdk_creds=True,
                                                 ),
                                                 path="path_example",
                                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -17577,6 +17778,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                         optional=True,
                                                     ),
                                                     bucket="bucket_example",
+                                                    ca_secret=SecretKeySelector(
+                                                        key="key_example",
+                                                        name="name_example",
+                                                        optional=True,
+                                                    ),
                                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                         object_locking=True,
                                                     ),
@@ -17840,6 +18046,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                                 optional=True,
                                                             ),
                                                             security_token="security_token_example",
+                                                            use_sdk_creds=True,
                                                         ),
                                                         path="path_example",
                                                         raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -17853,6 +18060,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                                 optional=True,
                                                             ),
                                                             bucket="bucket_example",
+                                                            ca_secret=SecretKeySelector(
+                                                                key="key_example",
+                                                                name="name_example",
+                                                                optional=True,
+                                                            ),
                                                             create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                                 object_locking=True,
                                                             ),
@@ -18138,6 +18350,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -18151,6 +18364,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -18691,6 +18909,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -18704,6 +18923,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -19009,6 +19233,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -19022,6 +19247,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -19288,6 +19518,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -19301,6 +19532,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -20124,6 +20360,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                         optional=True,
                                                     ),
                                                     security_token="security_token_example",
+                                                    use_sdk_creds=True,
                                                 ),
                                                 path="path_example",
                                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -20137,6 +20374,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                         optional=True,
                                                     ),
                                                     bucket="bucket_example",
+                                                    ca_secret=SecretKeySelector(
+                                                        key="key_example",
+                                                        name="name_example",
+                                                        optional=True,
+                                                    ),
                                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                         object_locking=True,
                                                     ),
@@ -20396,6 +20638,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                                 optional=True,
                                                             ),
                                                             security_token="security_token_example",
+                                                            use_sdk_creds=True,
                                                         ),
                                                         path="path_example",
                                                         raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -20409,6 +20652,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                                 optional=True,
                                                             ),
                                                             bucket="bucket_example",
+                                                            ca_secret=SecretKeySelector(
+                                                                key="key_example",
+                                                                name="name_example",
+                                                                optional=True,
+                                                            ),
                                                             create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                                 object_locking=True,
                                                             ),
@@ -22056,6 +22304,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                     optional=True,
                                 ),
                                 security_token="security_token_example",
+                                use_sdk_creds=True,
                             ),
                             path="path_example",
                             raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -22069,6 +22318,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                     optional=True,
                                 ),
                                 bucket="bucket_example",
+                                ca_secret=SecretKeySelector(
+                                    key="key_example",
+                                    name="name_example",
+                                    optional=True,
+                                ),
                                 create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                     object_locking=True,
                                 ),
@@ -22135,6 +22389,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                             "key": "key_example",
                         },
                     ),
+                    pod_spec_patch="pod_spec_patch_example",
                     service_account_name="service_account_name_example",
                     strategy="strategy_example",
                 ),
@@ -22361,6 +22616,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -22374,6 +22630,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -22506,6 +22767,9 @@ with argo_workflows.ApiClient(configuration) as api_client:
                     ),
                 ),
                 pod_gc=IoArgoprojWorkflowV1alpha1PodGC(
+                    delete_delay_duration=Duration(
+                        duration="duration_example",
+                    ),
                     label_selector=LabelSelector(
                         match_expressions=[
                             LabelSelectorRequirement(
@@ -22975,6 +23239,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                 optional=True,
                             ),
                             security_token="security_token_example",
+                            use_sdk_creds=True,
                         ),
                         raw=IoArgoprojWorkflowV1alpha1RawArtifact(
                             data="data_example",
@@ -22986,6 +23251,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                 optional=True,
                             ),
                             bucket="bucket_example",
+                            ca_secret=SecretKeySelector(
+                                key="key_example",
+                                name="name_example",
+                                optional=True,
+                            ),
                             create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                 object_locking=True,
                             ),
@@ -23777,6 +24047,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                     optional=True,
                                                 ),
                                                 security_token="security_token_example",
+                                                use_sdk_creds=True,
                                             ),
                                             path="path_example",
                                             raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -23790,6 +24061,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                     optional=True,
                                                 ),
                                                 bucket="bucket_example",
+                                                ca_secret=SecretKeySelector(
+                                                    key="key_example",
+                                                    name="name_example",
+                                                    optional=True,
+                                                ),
                                                 create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                     object_locking=True,
                                                 ),
@@ -24053,6 +24329,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                             optional=True,
                                                         ),
                                                         security_token="security_token_example",
+                                                        use_sdk_creds=True,
                                                     ),
                                                     path="path_example",
                                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -24066,6 +24343,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                             optional=True,
                                                         ),
                                                         bucket="bucket_example",
+                                                        ca_secret=SecretKeySelector(
+                                                            key="key_example",
+                                                            name="name_example",
+                                                            optional=True,
+                                                        ),
                                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                             object_locking=True,
                                                         ),
@@ -24351,6 +24633,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     security_token="security_token_example",
+                                    use_sdk_creds=True,
                                 ),
                                 path="path_example",
                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -24364,6 +24647,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     bucket="bucket_example",
+                                    ca_secret=SecretKeySelector(
+                                        key="key_example",
+                                        name="name_example",
+                                        optional=True,
+                                    ),
                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                         object_locking=True,
                                     ),
@@ -24904,6 +25192,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     security_token="security_token_example",
+                                    use_sdk_creds=True,
                                 ),
                                 path="path_example",
                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -24917,6 +25206,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     bucket="bucket_example",
+                                    ca_secret=SecretKeySelector(
+                                        key="key_example",
+                                        name="name_example",
+                                        optional=True,
+                                    ),
                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                         object_locking=True,
                                     ),
@@ -25222,6 +25516,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     security_token="security_token_example",
+                                    use_sdk_creds=True,
                                 ),
                                 path="path_example",
                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -25235,6 +25530,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     bucket="bucket_example",
+                                    ca_secret=SecretKeySelector(
+                                        key="key_example",
+                                        name="name_example",
+                                        optional=True,
+                                    ),
                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                         object_locking=True,
                                     ),
@@ -25501,6 +25801,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     security_token="security_token_example",
+                                    use_sdk_creds=True,
                                 ),
                                 path="path_example",
                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -25514,6 +25815,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                         optional=True,
                                     ),
                                     bucket="bucket_example",
+                                    ca_secret=SecretKeySelector(
+                                        key="key_example",
+                                        name="name_example",
+                                        optional=True,
+                                    ),
                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                         object_locking=True,
                                     ),
@@ -26337,6 +26643,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                     optional=True,
                                                 ),
                                                 security_token="security_token_example",
+                                                use_sdk_creds=True,
                                             ),
                                             path="path_example",
                                             raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -26350,6 +26657,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                     optional=True,
                                                 ),
                                                 bucket="bucket_example",
+                                                ca_secret=SecretKeySelector(
+                                                    key="key_example",
+                                                    name="name_example",
+                                                    optional=True,
+                                                ),
                                                 create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                     object_locking=True,
                                                 ),
@@ -26609,6 +26921,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                             optional=True,
                                                         ),
                                                         security_token="security_token_example",
+                                                        use_sdk_creds=True,
                                                     ),
                                                     path="path_example",
                                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -26622,6 +26935,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                             optional=True,
                                                         ),
                                                         bucket="bucket_example",
+                                                        ca_secret=SecretKeySelector(
+                                                            key="key_example",
+                                                            name="name_example",
+                                                            optional=True,
+                                                        ),
                                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                             object_locking=True,
                                                         ),
@@ -27488,6 +27806,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                     optional=True,
                                 ),
                                 security_token="security_token_example",
+                                use_sdk_creds=True,
                             ),
                             raw=IoArgoprojWorkflowV1alpha1RawArtifact(
                                 data="data_example",
@@ -27499,6 +27818,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                     optional=True,
                                 ),
                                 bucket="bucket_example",
+                                ca_secret=SecretKeySelector(
+                                    key="key_example",
+                                    name="name_example",
+                                    optional=True,
+                                ),
                                 create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                     object_locking=True,
                                 ),
@@ -28290,6 +28614,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                         optional=True,
                                                     ),
                                                     security_token="security_token_example",
+                                                    use_sdk_creds=True,
                                                 ),
                                                 path="path_example",
                                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -28303,6 +28628,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                         optional=True,
                                                     ),
                                                     bucket="bucket_example",
+                                                    ca_secret=SecretKeySelector(
+                                                        key="key_example",
+                                                        name="name_example",
+                                                        optional=True,
+                                                    ),
                                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                         object_locking=True,
                                                     ),
@@ -28566,6 +28896,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                                 optional=True,
                                                             ),
                                                             security_token="security_token_example",
+                                                            use_sdk_creds=True,
                                                         ),
                                                         path="path_example",
                                                         raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -28579,6 +28910,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                                 optional=True,
                                                             ),
                                                             bucket="bucket_example",
+                                                            ca_secret=SecretKeySelector(
+                                                                key="key_example",
+                                                                name="name_example",
+                                                                optional=True,
+                                                            ),
                                                             create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                                 object_locking=True,
                                                             ),
@@ -28864,6 +29200,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -28877,6 +29214,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -29417,6 +29759,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -29430,6 +29773,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -29735,6 +30083,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -29748,6 +30097,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -30014,6 +30368,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         security_token="security_token_example",
+                                        use_sdk_creds=True,
                                     ),
                                     path="path_example",
                                     raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -30027,6 +30382,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                             optional=True,
                                         ),
                                         bucket="bucket_example",
+                                        ca_secret=SecretKeySelector(
+                                            key="key_example",
+                                            name="name_example",
+                                            optional=True,
+                                        ),
                                         create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                             object_locking=True,
                                         ),
@@ -30850,6 +31210,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                         optional=True,
                                                     ),
                                                     security_token="security_token_example",
+                                                    use_sdk_creds=True,
                                                 ),
                                                 path="path_example",
                                                 raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -30863,6 +31224,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                         optional=True,
                                                     ),
                                                     bucket="bucket_example",
+                                                    ca_secret=SecretKeySelector(
+                                                        key="key_example",
+                                                        name="name_example",
+                                                        optional=True,
+                                                    ),
                                                     create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                         object_locking=True,
                                                     ),
@@ -31122,6 +31488,7 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                                 optional=True,
                                                             ),
                                                             security_token="security_token_example",
+                                                            use_sdk_creds=True,
                                                         ),
                                                         path="path_example",
                                                         raw=IoArgoprojWorkflowV1alpha1RawArtifact(
@@ -31135,6 +31502,11 @@ with argo_workflows.ApiClient(configuration) as api_client:
                                                                 optional=True,
                                                             ),
                                                             bucket="bucket_example",
+                                                            ca_secret=SecretKeySelector(
+                                                                key="key_example",
+                                                                name="name_example",
+                                                                optional=True,
+                                                            ),
                                                             create_bucket_if_not_present=IoArgoprojWorkflowV1alpha1CreateS3BucketOptions(
                                                                 object_locking=True,
                                                             ),

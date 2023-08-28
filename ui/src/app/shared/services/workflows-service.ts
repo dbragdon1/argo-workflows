@@ -2,6 +2,7 @@ import {EMPTY, from, Observable, of} from 'rxjs';
 import {catchError, filter, map, mergeMap, switchMap} from 'rxjs/operators';
 import * as models from '../../../models';
 import {Event, LogEntry, NodeStatus, Workflow, WorkflowList, WorkflowPhase} from '../../../models';
+import {ResubmitOpts, RetryOpts} from '../../../models';
 import {SubmitOpts} from '../../../models/submit-opts';
 import {uiUrl} from '../base';
 import {Pagination} from '../pagination';
@@ -66,6 +67,10 @@ export const WorkflowsService = {
         return requests.get(`api/v1/workflows/${namespace}/${name}`).then(res => res.body as Workflow);
     },
 
+    getArchived(namespace: string, uid: string) {
+        return requests.get(`api/v1/archived-workflows/${uid}?namespace=${namespace}`).then(res => res.body as models.Workflow);
+    },
+
     watch(query: {
         namespace?: string;
         name?: string;
@@ -113,12 +118,32 @@ export const WorkflowsService = {
         return requests.loadEventSource(url).pipe(map(data => data && (JSON.parse(data).result as models.kubernetes.WatchEvent<Workflow>)));
     },
 
-    retry(name: string, namespace: string) {
-        return requests.put(`api/v1/workflows/${namespace}/${name}/retry`).then(res => res.body as Workflow);
+    retry(name: string, namespace: string, opts?: RetryOpts) {
+        return requests
+            .put(`api/v1/workflows/${namespace}/${name}/retry`)
+            .send(opts)
+            .then(res => res.body as Workflow);
     },
 
-    resubmit(name: string, namespace: string) {
-        return requests.put(`api/v1/workflows/${namespace}/${name}/resubmit`).then(res => res.body as Workflow);
+    retryArchived(uid: string, namespace: string, opts?: RetryOpts) {
+        return requests
+            .put(`api/v1/archived-workflows/${uid}/retry`)
+            .send({namespace, ...opts})
+            .then(res => res.body as Workflow);
+    },
+
+    resubmit(name: string, namespace: string, opts?: ResubmitOpts) {
+        return requests
+            .put(`api/v1/workflows/${namespace}/${name}/resubmit`)
+            .send(opts)
+            .then(res => res.body as Workflow);
+    },
+
+    resubmitArchived(uid: string, namespace: string, opts?: ResubmitOpts) {
+        return requests
+            .put(`api/v1/archived-workflows/${uid}/resubmit`)
+            .send({namespace, ...opts})
+            .then(res => res.body as Workflow);
     },
 
     suspend(name: string, namespace: string) {
@@ -149,6 +174,14 @@ export const WorkflowsService = {
 
     delete(name: string, namespace: string): Promise<WorkflowDeleteResponse> {
         return requests.delete(`api/v1/workflows/${namespace}/${name}`).then(res => res.body as WorkflowDeleteResponse);
+    },
+
+    deleteArchived(uid: string, namespace: string): Promise<WorkflowDeleteResponse> {
+        if (namespace === '') {
+            return requests.delete(`api/v1/archived-workflows/${uid}`).then(res => res.body as WorkflowDeleteResponse);
+        } else {
+            return requests.delete(`api/v1/archived-workflows/${uid}?namespace=${namespace}`).then(res => res.body as WorkflowDeleteResponse);
+        }
     },
 
     submit(kind: string, name: string, namespace: string, submitOptions?: SubmitOpts) {
@@ -203,13 +236,16 @@ export const WorkflowsService = {
         return of(hasArtifactLogs(workflow, nodeId, container)).pipe(
             switchMap(isArtifactLogs => {
                 if (!isArtifactLogs) {
+                    if (!nodeId) {
+                        throw new Error('Should specify a node when we get archived logs');
+                    }
                     throw new Error('no artifact logs are available');
                 }
 
                 return from(requests.get(this.getArtifactLogsPath(workflow, nodeId, container, archived)));
             }),
             mergeMap(r => r.text.split('\n')),
-            map(content => ({content} as LogEntry)),
+            map(content => ({content, podName: workflow.status.nodes[nodeId].displayName} as LogEntry)),
             filter(x => !!x.content.match(grep))
         );
     },
